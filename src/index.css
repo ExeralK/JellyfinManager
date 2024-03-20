@@ -21,11 +21,10 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('./assets/fonts/roboto/Roboto-SemiBold.ttf') format('truetype');
+  src: url('./assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
-
 
 :root {
   --dark-color: #211C1C;

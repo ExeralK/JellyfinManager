@@ -1,12 +1,13 @@
 import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
+import { orange, black, white } from './../../theme/colors';
 
 @customElement("ex-button")
 export class ExButton extends LitElement {
   static styles = css`
     button {
-      background-color: var(--orange-color);
-      color: var(--black-color);
+      background-color: ${orange};
+      color: ${black};
       border: none;
       padding: 10px 20px;
       font-size: 1em;
@@ -18,7 +19,7 @@ export class ExButton extends LitElement {
     }
 
     button:hover {
-      color: var(--white-color);
+      color: ${white};
     }
 
     :host {
