@@ -1,18 +1,17 @@
-import { LitElement, html } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { LitElement, html } from 'lit';
+import { property } from 'lit/decorators.js';
 
-@customElement("ex-icon")
 export class ExIcon extends LitElement {
-  @property({ type: String }) id = "";
+  @property({ type: String }) id = '';
 
   private readonly iconMap: any = {
     beer: () => '',
     home: () => '',
     user: () => '',
-    spinner: () => ''
+    spinner: () => '',
   };
 
   render() {
-    return html`<span>${this.iconMap[this.id]()}</span>`
+    return html`<span>${this.iconMap[this.id]()}</span>`;
   }
 }

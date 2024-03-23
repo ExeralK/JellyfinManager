@@ -1,9 +1,8 @@
-import { LitElement, html } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { LitElement, html } from 'lit';
+import { property } from 'lit/decorators.js';
 
-@customElement("ex-heading")
 export class ExHeading extends LitElement {
-  @property({ type: String }) headType: "h1" | "h2" | "h3" | "h4";
+  @property({ type: String }) type: 'h1' | 'h2' | 'h3' | 'h4';
 
   private readonly headingMap = {
     h1: () => html`<h1><slot></slot></h1>`,
@@ -13,6 +12,6 @@ export class ExHeading extends LitElement {
   };
 
   render() {
-    return this.headingMap[this.headType]();
+    return this.headingMap[this.type]();
   }
 }

@@ -1,18 +1,19 @@
-import { LitElement, html, css } from "lit";
-import { customElement } from "lit/decorators.js";
-import './atoms/ExButton'
-// import './atoms/ExHeading'
+import { LitElement, html, css } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import { ScopedElementsMixin } from '@open-wc/scoped-elements/lit-element.js';
+import { ExButton, ExHeading } from './atoms';
 
-@customElement("main-app")
-export class MainApp extends LitElement {
-  static styles = css`
-  `;
+@customElement('main-app')
+export class MainApp extends ScopedElementsMixin(LitElement) {
+  static styles = css``;
+
+  static scopedElements = {
+    'ex-button': ExButton,
+  };
 
   render() {
     return html`
-      <!-- <ex-heading headType="h1">Hello World</ex-heading> -->
-      <!-- Your app content -->
-      <!-- <ex-heading headType="h2">Hello World</ex-heading> -->
+      <h1>Hello World!</h1>
       <ex-button>Test</ex-button>
     `;
   }

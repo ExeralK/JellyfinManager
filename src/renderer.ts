@@ -27,5 +27,6 @@
  */
 
 import './index.css';
+import '@webcomponents/scoped-custom-element-registry';
 
 console.log('👋 This message is being logged by "renderer.ts", included via Vite');
